@@ -4,13 +4,13 @@ This project automates the deployment of a WordPress website hosted on Amazon EC
 The deployment uses a local MySQL database installed on the same EC2 instance as WordPress (no RDS), with network isolation, a modular YAML template, and a scheduled auto-shutdown mechanism using Lambda and CloudWatch Events.
 
 # Key Features
-Infrastructure as Code using CloudFormation
-EC2 instance provisioned with Apache, PHP, and WordPress
-Custom VPC, Subnet, Security Group for secure network setup
-Automated WordPress installation via UserData script
-Lambda + CloudWatch scheduled shutdown to save cost
-Visual validation through step-by-step screenshots
-AMI creation for future replication of WordPress setup
+1. Infrastructure as Code using CloudFormation
+2. EC2 instance provisioned with Apache, PHP, and WordPress
+3. Custom VPC, Subnet, Security Group for secure network setup
+4. Automated WordPress installation via UserData script
+5. Lambda + CloudWatch scheduled shutdown to save cost
+6. Visual validation through step-by-step screenshots
+7. AMI creation for future replication of WordPress setup
 
 # Documentation
 File	Description
