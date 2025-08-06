@@ -14,27 +14,27 @@ The deployment uses a local MySQL database installed on the same EC2 instance as
 
 # Documentation
 File	Description
-yamlcode_wordpresstemplate--cloudformationstack.pdf	CloudFormation template defining all infrastructure
-screenshots.pdf	EC2 setup, WordPress login, Lambda, CloudWatch logs
-Writeup.pdf	Explanation of implementation steps and key decisions
+1. yamlcode_wordpresstemplate--cloudformationstack.pdf	CloudFormation template defining all infrastructure
+2. screenshots.pdf	EC2 setup, WordPress login, Lambda, CloudWatch logs
+3. Writeup.pdf	--> Explanation of implementation steps and key decisions
 
 AWS Services Used
-Amazon EC2 – WordPress and MySQL hosting (single instance)
-Amazon VPC – Custom networking layer with a public subnet
-Amazon CloudFormation – Defines and provisions AWS resources as YAML
-AWS Lambda – Scheduled shutdown of EC2 to reduce cost
-Amazon CloudWatch Events – Triggers Lambda on schedule
+1. Amazon EC2 – WordPress and MySQL hosting (single instance)
+2. Amazon VPC – Custom networking layer with a public subnet
+3. Amazon CloudFormation – Defines and provisions AWS resources as YAML
+4. AWS Lambda – Scheduled shutdown of EC2 to reduce cost
+5. Amazon CloudWatch Events – Triggers Lambda on schedule
 
 ! Note: Amazon RDS and Load Balancer were not used in this implementation. The database runs locally on EC2, and scaling/load balancing were out of project scope.
 
 # Learning Outcomes
-Design and deploy modular AWS infrastructure using CloudFormation
-Automate software setup via EC2 UserData scripting
-Configure custom VPC and subnet layouts for isolated environments
-Manage IAM roles and Lambda permissions
-Schedule cost-saving actions with CloudWatch + Lambda
-Create and use AMIs for reproducible instance setups
-Debug failed stack deployments and security group issues
+1. Design and deploy modular AWS infrastructure using CloudFormation
+2. Automate software setup via EC2 UserData scripting
+3. Configure custom VPC and subnet layouts for isolated environments
+4. Manage IAM roles and Lambda permissions
+5. Schedule cost-saving actions with CloudWatch + Lambda
+6. Create and use AMIs for reproducible instance setups
+7. Debug failed stack deployments and security group issues
 
 # Acknowledgements
 Thanks to AWS and the Simplilearn platform for providing comprehensive training and cloud lab exposure that enabled this project.
