@@ -39,4 +39,4 @@ AWS Services Used
 # Acknowledgements
 Thanks to AWS and the Simplilearn platform for providing comprehensive training and cloud lab exposure that enabled this project.
 
-# License: This project is licensed under the MIT License – see the LICENSE file for details.
+### License: This project is licensed under the MIT License – see the LICENSE file for details.
