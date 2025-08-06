@@ -1,38 +1,42 @@
 # Stacked WordPress Deployment on AWS using CloudFormation
+This project automates the deployment of a WordPress website hosted on Amazon EC2 using a custom CloudFormation template. It was developed as part of the Simplilearn AWS training program to demonstrate core infrastructure-as-code skills, automation with Lambda, and cost optimization through scheduling.
 
-This project demonstrates the automated deployment of a full WordPress stack (EC2 + RDS + Load Balancer) on AWS using CloudFormation. It was implemented as part of my AWS training via the Simplilearn platform.
+The deployment uses a local MySQL database installed on the same EC2 instance as WordPress (no RDS), with network isolation, a modular YAML template, and a scheduled auto-shutdown mechanism using Lambda and CloudWatch Events.
 
 # Key Features
-
-- AWS CloudFormation YAML template for full stack
-- Auto-scaling, load-balanced EC2 instances
-- Secure and persistent RDS MySQL backend
-- Modular architecture with parameters
+Infrastructure as Code using CloudFormation
+EC2 instance provisioned with Apache, PHP, and WordPress
+Custom VPC, Subnet, Security Group for secure network setup
+Automated WordPress installation via UserData script
+Lambda + CloudWatch scheduled shutdown to save cost
+Visual validation through step-by-step screenshots
+AMI creation for future replication of WordPress setup
 
 # Documentation
+File	Description
+yamlcode_wordpresstemplate--cloudformationstack.pdf	CloudFormation template defining all infrastructure
+screenshots.pdf	EC2 setup, WordPress login, Lambda, CloudWatch logs
+Writeup.pdf	Explanation of implementation steps and key decisions
 
-| Document | Description |
-|----------|-------------|
-| [YAML Template PDF](yamlcode_wordpresstemplate--cloudformationstack.pdf) | Full CloudFormation template with comments |
-| [Screenshots PDF](screenshots.pdf) | Screenshots of deployed infrastructure and testing |
-| [Write-up PDF](Writeup.pdf) | Overview and explanation of the deployment setup |
+AWS Services Used
+Amazon EC2 – WordPress and MySQL hosting (single instance)
+Amazon VPC – Custom networking layer with a public subnet
+Amazon CloudFormation – Defines and provisions AWS resources as YAML
+AWS Lambda – Scheduled shutdown of EC2 to reduce cost
+Amazon CloudWatch Events – Triggers Lambda on schedule
 
-# AWS Services Used
-- Amazon EC2 (WordPress hosting)
-- Amazon RDS (MySQL database)
-- Amazon ELB (Load Balancer)
-- Amazon VPC, Subnets, and Security Groups
-- Amazon CloudFormation
+! Note: Amazon RDS and Load Balancer were not used in this implementation. The database runs locally on EC2, and scaling/load balancing were out of project scope.
 
-# learning outcomes
-- Writing modular, parameterized CloudFormation templates
-- Configuring VPCs, Security Groups, and key networking concepts
-- Understanding scalable architectures on AWS
-- Troubleshooting deployment and instance connectivity
-## Acknowledgements
+# Learning Outcomes
+Design and deploy modular AWS infrastructure using CloudFormation
+Automate software setup via EC2 UserData scripting
+Configure custom VPC and subnet layouts for isolated environments
+Manage IAM roles and Lambda permissions
+Schedule cost-saving actions with CloudWatch + Lambda
+Create and use AMIs for reproducible instance setups
+Debug failed stack deployments and security group issues
 
-Thanks to **AWS** and the **Simplilearn platform** for the hands-on opportunity and structured guidance.
+# Acknowledgements
+Thanks to AWS and the Simplilearn platform for providing comprehensive training and cloud lab exposure that enabled this project.
 
----
-
-License: This project is licensed under the MIT License – see the LICENSE file for details.
+# License: This project is licensed under the MIT License – see the LICENSE file for details.
