@@ -1,7 +1,7 @@
 # Stacked WordPress Deployment on AWS using CloudFormation
 This project automates the deployment of a WordPress website hosted on Amazon EC2 using a custom CloudFormation template. It was developed as part of the Simplilearn AWS training program to demonstrate core infrastructure-as-code skills, automation with Lambda, and cost optimization through scheduling.
 
-The deployment uses a local MySQL database installed on the same EC2 instance as WordPress (no RDS), with network isolation, a modular YAML template, and a scheduled auto-shutdown mechanism using Lambda and CloudWatch Events.
+The deployment uses a local MySQL database installed on the same EC2 instance as WordPress, with network isolation, a modular YAML template, and a scheduled auto-shutdown mechanism using Lambda and CloudWatch Events.
 
 # Key Features
 1. Infrastructure as Code using CloudFormation
@@ -25,7 +25,6 @@ AWS Services Used
 4. AWS Lambda – Scheduled shutdown of EC2 to reduce cost
 5. Amazon CloudWatch Events – Triggers Lambda on schedule
 
-! Note: Amazon RDS and Load Balancer were not used in this implementation. The database runs locally on EC2, and scaling/load balancing were out of project scope.
 
 # Learning Outcomes
 1. Design and deploy modular AWS infrastructure using CloudFormation
@@ -39,4 +38,4 @@ AWS Services Used
 # Acknowledgements
 Thanks to AWS and the Simplilearn platform for providing comprehensive training and cloud lab exposure that enabled this project.
 
-### License: This project is licensed under the MIT License – see the LICENSE file for details.
+### License: – see the LICENSE file for details.
